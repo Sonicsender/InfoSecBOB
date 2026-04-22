@@ -22,9 +22,7 @@ export default async function handler(req, res) {
         message: {
           subject: "Fraud Alert Detected",
           body: { contentType: "Text", content: `Fraud detected at ${report.l || report.url}` },
-          toRecipients: [{ emailAddress: { address: "zaboutarieh@bankofbeirut.com.lb" } }
-                        { emailAddress: { address: "eakiki@bankofbeirut.com.lb" } }
-                        { emailAddress: { address: "elkeyrouz@bankofbeirut.com.lb" } }]
+          toRecipients: [{ emailAddress: { address: "infosecteam@bankofbeirut.com.lb" } }]
         }
       });
       res.status(200).json({ status: "report saved and email sent" });
